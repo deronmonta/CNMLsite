@@ -1,0 +1,29 @@
+<%= form_for(@pupil) do |f| %>
+  <% if @pupil.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pupil.errors.count, "error") %> prohibited this pupil from being saved:</h2>
+
+      <ul>
+      <% @pupil.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br>
+    <%= f.text_field :from %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br>
+    <%= f.text_field :string %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

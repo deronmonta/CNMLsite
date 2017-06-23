@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pupil.name %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @pupil.from %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @pupil.string %>
+</p>
+
+<%= link_to 'Edit', edit_pupil_path(@pupil) %> |
+<%= link_to 'Back', pupils_path %>
